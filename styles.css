@@ -655,6 +655,7 @@ body, html {
   background: linear-gradient(90deg, var(--color--black) 25%, rgba(6, 8, 5, 0.7) 60%, rgba(6, 8, 5, 0.2) 100%),
               linear-gradient(0deg, var(--color--black) 10%, transparent 60%);
   z-index: 3;
+  pointer-events: none;
 }
 
 /* Vertical Tag */
@@ -745,7 +746,7 @@ body, html {
 /* Main Hero Typography */
 .home-hero-content {
   position: relative;
-  z-index: 10;
+  z-index: 20;
   max-width: 850px;
   margin-bottom: 2rem;
 }
@@ -815,6 +816,15 @@ body, html {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
+  position: relative;
+  z-index: 50;
+}
+
+.hero-actions-row a,
+.hero-actions-row button {
+  pointer-events: all !important;
+  position: relative;
+  z-index: 50;
 }
 
 .btn-w.is-hero {
@@ -830,6 +840,8 @@ body, html {
   border: 1px solid rgba(255, 255, 255, 0.25);
   background: rgba(11, 16, 8, 0.6);
   color: var(--color--white);
+  position: relative;
+  z-index: 20;
 }
 
 .btn-w.is-hero-outline:hover {

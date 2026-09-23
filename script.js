@@ -100,6 +100,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- 5a. Force Resume Download Button ---
+  document.querySelectorAll('a[download]').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var link = document.createElement('a');
+      link.href = 'resume.pdf';
+      link.download = 'Muskan_Gupta_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      e.preventDefault();
+    });
+  });
+
   // --- 5. Interactive Calendar Rows ---
   calendarRows.forEach((row) => {
     row.addEventListener('click', () => {
@@ -136,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(target);
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
   );
 
   counters.forEach((counter) => counterObserver.observe(counter));
