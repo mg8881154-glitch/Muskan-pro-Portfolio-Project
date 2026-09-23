@@ -620,6 +620,7 @@ body, html {
   border-radius: 50%;
   background: radial-gradient(circle, rgba(210, 255, 0, 0.18) 0%, rgba(11, 16, 8, 0) 70%);
   filter: blur(80px);
+  pointer-events: none;
 }
 
 .hero-grid-mesh {
@@ -630,6 +631,7 @@ body, html {
     linear-gradient(90deg, rgba(210, 255, 0, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   opacity: 0.6;
+  pointer-events: none;
 }
 
 .hero-portrait-img {
