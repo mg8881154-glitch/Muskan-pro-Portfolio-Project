@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5" />
+  <title>Muskan Gupta — Full Stack Developer & AI Builder</title>
+  <meta name="description" content="Official portfolio for Muskan Gupta: Full stack developer, AI builder, CS & Data Science specialist with high-speed software architecture." />
+  
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@700;900&family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-nav-theme="light">
+  <!-- Progress / Scroll Indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-indicator-bar" id="scrollIndicator"></div>
+  </div>
+
+  <!-- Intro Loading Gate (Lando Norris 'Load Norris' Style) -->
+  <div class="loader" id="loader" aria-label="Portfolio loading screen">
+    <div class="loader-bg-glow"></div>
+    <div class="loader-content">
+      <div class="loader-tag">OFFICIAL 2026 PORTFOLIO • MUSKAN GUPTA</div>
+      <button class="loader__button" type="button" id="loadButton" aria-label="Enter site">
+        <span class="btn-text">LOAD MUSKAN</span>
+        <span class="loader-btn-sub">CLICK TO ENTER HIGH VELOCITY</span>
+      </button>
+      <div class="loader-hud-telemetry">
+        <span>LATENCY: 12ms</span>
+        <span>STATUS: READY</span>
+        <span>SYSTEM: ONLINE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Top Navigation -->
+  <header class="nav" id="mainNav" data-nav-wrap>
+    <div class="nav-inner">
+      <!-- Brand Logo / Monogram -->
+      <a href="#home" class="nav-brand-link" title="Muskan Gupta Home">
+        <div class="nav-brand">
+          <svg class="nav-brand-svg" viewBox="0 0 138 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Custom Styled MG Monogram -->
+            <path d="M12 52V12h14l14 26 14-26h14v40h-12V27L42 47h-4L24 27v25H12Z" fill="currentColor"/>
+            <path d="M82 32h24v12c0 5-4 9-9 9H79c-5 0-9-4-9-9V21c0-5 4-9 9-9h25c5 0 9 4 9 9v4h-12v-3c0-1-.8-2-2-2H82c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h12v-6H82v-6Z" fill="var(--color--lime)"/>
+            <path d="M120 12h10l-12 40h-10l12-40Z" fill="currentColor" opacity="0.6"/>
+            <circle cx="130" cy="50" r="3" fill="var(--color--lime)"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Center Logo / Monogram Shield -->
+      <div class="nav-middle">
+        <a href="#home" class="nav-middle-link" title="Return to Top">
+          <div class="nav-shield-badge">
+            <span class="shield-num">04</span>
+            <span class="shield-tag">MG</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Nav CTA & Hamburger Menu -->
+      <div class="nav-actions">
+        <button class="btn-w is-nav" data-theme="lime" type="button" id="hireMeBtn" aria-label="Open contact modal">
+          <div class="btn-inner">
+            <div class="btn-icon-w">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.57 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.76a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <span class="btn-text">HIRE ME</span>
+          </div>
+        </button>
+
+        <!-- Hamburger Toggle -->
+        <button class="nav-ham" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="ham-line ham-line--1"></span>
+          <span class="ham-line ham-line--2"></span>
+          <span class="ham-line ham-line--3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Navigation Drawer (Exact Lando Norris Style) -->
+  <div class="nav-menu-w" id="navDrawer" aria-hidden="true">
+    <div class="nav-menu-inner">
+      <div class="nav-menu-grid">
+        <!-- Dynamic Image Preview Showcase -->
+        <div class="nav-menu-images-w">
+          <div class="nav-menu-images-track">
+            <div class="nav-menu-img-card active" data-nav-preview="home">
+              <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80" alt="Code workstation" />
+              <div class="nav-menu-img-overlay">
+                <span>01 // WELCOME HUB</span>
+              </div>
+            </div>
+            <div class="nav-menu-img-card" data-nav-preview="on-code">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Software Architecture" />
+              <div class="nav-menu-img-overlay">
+                <span>02 // FULL STACK & AI SYSTEMS</span>
+              </div>
+            </div>
+            <div class="nav-menu-img-card" data-nav-preview="off-code">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80" alt="Engineering Journey" />
+              <div class="nav-menu-img-overlay">
+                <span>03 // CREDENTIALS & RESEARCH</span>
+              </div>
+            </div>
+            <div class="nav-menu-img-card" data-nav-preview="calendar">
+              <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=800&q=80" alt="Timeline Milestones" />
+              <div class="nav-menu-img-overlay">
+                <span>04 // CAREER GRAND PRIX</span>
+              </div>
+            </div>
+            <div class="nav-menu-img-card" data-nav-preview="toolkit">
+              <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Technical Toolkit" />
+              <div class="nav-menu-img-overlay">
+                <span>05 // TELEMETRY & STACK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Links Column -->
+        <div class="nav-menu-links-col">
+          <div class="nav-menu-eyebrow">
+            <span class="text-eyebrow">NAVIGATION PORTAL</span>
+            <span class="text-eyebrow c-lime">CS & DATA SCIENCE SINCE 2024</span>
+          </div>
+
+          <div class="nav-menu-links-list">
+            <a href="#home" class="nav-menu-link-w" data-menu-item="home">
+              <span class="nav-link-num">01</span>
+              <span class="text-nav-link">Home</span>
+              <svg class="nav-link-track-svg" viewBox="0 0 412 26" fill="none">
+                <path d="M0 2h73.5c5.9 0 11.5 2.4 15.6 6.5l8.6 8.7a21.9 21.9 0 0 0 15.6 6.5h72.7c6 0 11.8-2.5 16-6.9l6.5-6.9A21.9 21.9 0 0 1 224.3 3h76.8a21.9 21.9 0 0 1 16.8 7.9l4.4 5.2A21.9 21.9 0 0 0 339.1 24H412" stroke="currentColor" stroke-width="3"/>
+              </svg>
+            </a>
+            <a href="#work" class="nav-menu-link-w" data-menu-item="on-code">
+              <span class="nav-link-num">02</span>
+              <span class="text-nav-link">On Code</span>
+              <svg class="nav-link-track-svg" viewBox="0 0 412 26" fill="none">
+                <path d="M0 2h73.5c5.9 0 11.5 2.4 15.6 6.5l8.6 8.7a21.9 21.9 0 0 0 15.6 6.5h72.7c6 0 11.8-2.5 16-6.9l6.5-6.9A21.9 21.9 0 0 1 224.3 3h76.8a21.9 21.9 0 0 1 16.8 7.9l4.4 5.2A21.9 21.9 0 0 0 339.1 24H412" stroke="currentColor" stroke-width="3"/>
+              </svg>
+            </a>
+            <a href="#offcode" class="nav-menu-link-w" data-menu-item="off-code">
+              <span class="nav-link-num">03</span>
+              <span class="text-nav-link">Off Code</span>
+              <svg class="nav-link-track-svg" viewBox="0 0 412 26" fill="none">
+                <path d="M0 2h73.5c5.9 0 11.5 2.4 15.6 6.5l8.6 8.7a21.9 21.9 0 0 0 15.6 6.5h72.7c6 0 11.8-2.5 16-6.9l6.5-6.9A21.9 21.9 0 0 1 224.3 3h76.8a21.9 21.9 0 0 1 16.8 7.9l4.4 5.2A21.9 21.9 0 0 0 339.1 24H412" stroke="currentColor" stroke-width="3"/>
+              </svg>
+            </a>
+            <a href="#calendar" class="nav-menu-link-w" data-menu-item="calendar">
+              <span class="nav-link-num">04</span>
+              <span class="text-nav-link">Calendar</span>
+              <svg class="nav-link-track-svg" viewBox="0 0 412 26" fill="none">
+                <path d="M0 2h73.5c5.9 0 11.5 2.4 15.6 6.5l8.6 8.7a21.9 21.9 0 0 0 15.6 6.5h72.7c6 0 11.8-2.5 16-6.9l6.5-6.9A21.9 21.9 0 0 1 224.3 3h76.8a21.9 21.9 0 0 1 16.8 7.9l4.4 5.2A21.9 21.9 0 0 0 339.1 24H412" stroke="currentColor" stroke-width="3"/>
+              </svg>
+            </a>
+            <a href="#toolkit" class="nav-menu-link-w" data-menu-item="toolkit">
+              <span class="nav-link-num">05</span>
+              <span class="text-nav-link">Toolkit</span>
+              <svg class="nav-link-track-svg" viewBox="0 0 412 26" fill="none">
+                <path d="M0 2h73.5c5.9 0 11.5 2.4 15.6 6.5l8.6 8.7a21.9 21.9 0 0 0 15.6 6.5h72.7c6 0 11.8-2.5 16-6.9l6.5-6.9A21.9 21.9 0 0 1 224.3 3h76.8a21.9 21.9 0 0 1 16.8 7.9l4.4 5.2A21.9 21.9 0 0 0 339.1 24H412" stroke="currentColor" stroke-width="3"/>
+              </svg>
+            </a>
+            <a href="#3d-lab" class="nav-menu-link-w" data-menu-item="3d-lab">
+              <span class="nav-link-num">06</span>
+              <span class="text-nav-link">3D Lab 360°</span>
+              <svg class="nav-link-track-svg" viewBox="0 0 412 26" fill="none">
+                <path d="M0 2h73.5c5.9 0 11.5 2.4 15.6 6.5l8.6 8.7a21.9 21.9 0 0 0 15.6 6.5h72.7c6 0 11.8-2.5 16-6.9l6.5-6.9A21.9 21.9 0 0 1 224.3 3h76.8a21.9 21.9 0 0 1 16.8 7.9l4.4 5.2A21.9 21.9 0 0 0 339.1 24H412" stroke="currentColor" stroke-width="3"/>
+              </svg>
+            </a>
+            <a href="#terminal" class="nav-menu-link-w" data-menu-item="terminal">
+              <span class="nav-link-num">07</span>
+              <span class="text-nav-link">Terminal</span>
+              <svg class="nav-link-track-svg" viewBox="0 0 412 26" fill="none">
+                <path d="M0 2h73.5c5.9 0 11.5 2.4 15.6 6.5l8.6 8.7a21.9 21.9 0 0 0 15.6 6.5h72.7c6 0 11.8-2.5 16-6.9l6.5-6.9A21.9 21.9 0 0 1 224.3 3h76.8a21.9 21.9 0 0 1 16.8 7.9l4.4 5.2A21.9 21.9 0 0 0 339.1 24H412" stroke="currentColor" stroke-width="3"/>
+              </svg>
+            </a>
+            <a href="resume.pdf" download="Muskan_Gupta_Resume.pdf" class="nav-menu-link-w" data-menu-item="resume">
+              <span class="nav-link-num">08</span>
+              <span class="text-nav-link">Resume ↓</span>
+              <svg class="nav-link-track-svg" viewBox="0 0 412 26" fill="none">
+                <path d="M0 2h73.5c5.9 0 11.5 2.4 15.6 6.5l8.6 8.7a21.9 21.9 0 0 0 15.6 6.5h72.7c6 0 11.8-2.5 16-6.9l6.5-6.9A21.9 21.9 0 0 1 224.3 3h76.8a21.9 21.9 0 0 1 16.8 7.9l4.4 5.2A21.9 21.9 0 0 0 339.1 24H412" stroke="currentColor" stroke-width="3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Menu Socials Footer -->
+          <div class="nav-menu-social-w">
+            <a href="mailto:mg8881154@gmail.com" class="text-link-w c-lime">
+              <span class="btn-text">mg8881154@gmail.com</span>
+            </a>
+            <div class="nav-menu-social-links">
+              <a href="https://github.com/mg8881154-glitch" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/muskan-gupta-616120365" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://leetcode.com/u/DTHmIJBrp9/" target="_blank" rel="noreferrer">LeetCode</a>
+              <a href="https://www.zetheta.com/certificate/94597861/" target="_blank" rel="noreferrer">Zetheta Cert</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Page Body -->
+  <main class="main-w" id="home">
+    
+    <!-- Hero Section (Lando Norris Hero HUD Aesthetic) -->
+    <section class="s home-hero" aria-label="Hero Section">
+      <div class="c home-hero-c">
+        
+        <!-- Hero Background Visual & Glow -->
+        <div class="home-hero-bg">
+          <div class="hero-glow-radial"></div>
+          <div class="hero-grid-mesh"></div>
+          <img
+            class="hero-portrait-img"
+            src="profile.jpg"
+            alt="Muskan Gupta Portrait"
+          />
+          <div class="hero-portrait-overlay"></div>
+        </div>
+
+        <!-- Vertical Subtitle Tag (LN4 Style) -->
+        <div class="hero-vertical-tag">
+          <span>CS & DATA SCIENCE • GALGOTIAS COLLEGE OF ENGINEERING AND TECHNOLOGY • SINCE 2024</span>
+        </div>
+
+        <!-- Floating HUD Next Race / Build Card (Lando Cut-Corner SVG Card) -->
+        <aside class="home-hero-next-race-w" aria-label="Next Build Telemetry">
+          <!-- Outline Cut-Corner SVG -->
+          <div class="home-hero-next-race-outline">
+            <svg width="100%" height="100%" viewBox="0 0 119 244" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+              <path d="M118.5 6v232a5.5 5.5 0 0 1-5.5 5.5H6A5.5 5.5 0 0 1 .5 238V25A5.5 5.5 0 0 1 6 19.5h46.3c4.7 0 9.2-2 12.3-5.5l7.5-8.3A15.5 15.5 0 0 1 83.7.5H113a5.5 5.5 0 0 1 5.5 5.5Z" stroke="var(--color--lime)" stroke-width="1.5"/>
+            </svg>
+          </div>
+
+          <div class="home-hero-next-race-top">
+            <span class="text-eyebrow c-lime">NEXT BUILD</span>
+          </div>
+
+          <a href="#projects" class="home-hero-next-race-row is-1">
+            <div class="circuit-icon-w">
+              <!-- Circuit Track Vector Shape -->
+              <svg viewBox="0 0 48 48" fill="none" class="circuit-svg">
+                <path d="M10 38h24c4.4 0 8-3.6 8-8V18c0-4.4-3.6-8-8-8H20c-4.4 0-8 3.6-8 8v8c0 4.4 3.6 8 8 8h10" stroke="var(--color--lime)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10" cy="38" r="3" fill="var(--color--lime)"/>
+              </svg>
+            </div>
+            <div class="eyebrow-w">
+              <span class="text-eyebrow font-brier">CodeHub</span>
+              <span class="text-eyebrow c-muted">AI DSA GP</span>
+            </div>
+          </a>
+
+          <div class="home-hero-next-race-line"></div>
+
+          <div class="home-hero-next-race-row is-2">
+            <div class="circuit-icon-w">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="circuit-svg">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div class="eyebrow-w hero-next-race">
+              <span class="text-eyebrow">GCET '28</span>
+              <span class="text-eyebrow c-lime">FULL STACK DEV</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Hero Headline Layout -->
+        <div class="home-hero-content">
+          <div class="hero-eyebrow-pill">
+            <span class="pulse-dot"></span>
+            <span class="text-eyebrow">FULL STACK DEVELOPER / AI BUILDER</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-title-first">MUSKAN</span>
+            <span class="hero-title-last">GUPTA</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            2026 software portfolio built for speed, story, and high-impact systems.
+          </p>
+
+          <div class="hero-actions-row">
+            <a href="#work" class="btn-w is-hero" data-theme="lime">
+              <div class="btn-inner">
+                <span class="btn-text">EXPLORE WORK</span>
+                <div class="btn-icon-w">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
+            <a href="resume.pdf" download="Muskan_Gupta_Resume.pdf" class="btn-w is-hero-outline">
+              <div class="btn-inner">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                <span class="btn-text">DOWNLOAD RESUME</span>
+              </div>
+            </a>
+            <a href="https://github.com/mg8881154-glitch" target="_blank" rel="noreferrer" class="btn-w is-hero-outline">
+              <div class="btn-inner">
+                <span class="btn-text">GITHUB ARCHIVE</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Floating Touch Scroll Lock Button -->
+        <div class="home-hero-touch-controls-w">
+          <button class="btn-w is-touch-swipe" type="button" id="driveLock" aria-pressed="false" title="Toggle Page Lock">
+            <div class="btn-inner is-touch-swipe">
+              <div class="btn-icon-w is-touch-swipe">
+                <span class="lock-icon-dot"></span>
+              </div>
+              <span class="touch-desc" id="lockLabel">TAP TO LOCK DRIVE</span>
+            </div>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Infinite Scrolling Marquee Banner 1 (Motorsport Ticker) -->
+    <div class="s home-marquee" aria-hidden="true">
+      <div class="marquee-track-w">
+        <div class="marquee-track marquee-track--left">
+          <div class="marquee-item"><span>FULL STACK DEVELOPER</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span class="c-lime">AI SYSTEMS &amp; NLP</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span>SCALABLE ARCHITECTURE</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span class="c-lime">JUDGE0 &amp; GROQ LLM</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span>DATA SCIENCE &amp; ANALYTICS</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span>HIGH PERFORMANCE CODE</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span class="c-lime">SHIP FAST WITH INTENT</span><span class="marquee-star">✦</span></div>
+          
+          <!-- Duplicate for seamless loop -->
+          <div class="marquee-item"><span>FULL STACK DEVELOPER</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span class="c-lime">AI SYSTEMS &amp; NLP</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span>SCALABLE ARCHITECTURE</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span class="c-lime">JUDGE0 &amp; GROQ LLM</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span>DATA SCIENCE &amp; ANALYTICS</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span>HIGH PERFORMANCE CODE</span><span class="marquee-star">✦</span></div>
+          <div class="marquee-item"><span class="c-lime">SHIP FAST WITH INTENT</span><span class="marquee-star">✦</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Impact Quote & Statement Section (Lando Norris Impact Typography) -->
+    <section class="s impact-section" id="about">
+      <div class="c">
+        <div class="impact-content-w">
+          <div class="impact-badge">
+            <span class="text-eyebrow c-lime">MESSAGE FROM MUSKAN</span>
+          </div>
+
+          <div class="text-impact-lg">
+            <strong>Redefining</strong> limits, fighting for <strong>performance</strong>, bringing high velocity in all ways. Defining a <strong>legacy</strong> in software on and off the terminal.
+          </div>
+
+          <div class="impact-signature-w">
+            <svg class="impact-signature-svg" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 50 Q 40 10 70 45 T 120 40 T 160 30 Q 190 20 230 45 T 280 20" stroke="var(--color--lime)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <text x="25" y="65" font-family="'Cinzel', serif" font-size="22" font-style="italic" fill="var(--color--lime)">Muskan Gupta</text>
+            </svg>
+            <p class="impact-note">Computer Science & Data Science Undergrad @ Galgotias College of Engineering and Technology • Full Stack Intern @ Zetheta Algorithms</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horizontal Scrolling Highlights Showcase ("On Code" Reel) -->
+    <section class="s is-horizontal-track" aria-label="Story Highlights">
+      <div class="c">
+        <div class="section-header-row">
+          <div class="title-headline-w">
+            <span class="text-eyebrow c-lime">RACE TELEMETRY // 2024 - 2026</span>
+            <h2 class="text-title-lg">TRACKSIDE<br/><span class="span-font-serif c-lime">HIGHLIGHTS</span></h2>
+          </div>
+          <p class="section-desc">Key milestones from production internships, AI application development, and hackathons.</p>
+        </div>
+
+        <div class="horizontal-scroll-container">
+          <div class="horizontal-track">
+            
+            <!-- Highlight 01 -->
+            <article class="horiz-card">
+              <div class="horiz-card-tag">ZETHETA ALGORITHMS, 2026</div>
+              <div class="horiz-card-img-w">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=700&q=80" alt="Full Stack engineering" />
+              </div>
+              <div class="horiz-card-meta">
+                <h3>Full Stack Development Intern</h3>
+                <p>Architected responsive client interfaces and robust backend REST APIs.</p>
+              </div>
+            </article>
+
+            <!-- Highlight 02 -->
+            <article class="horiz-card">
+              <div class="horiz-card-tag">CODEHUB GP, 2026</div>
+              <div class="horiz-card-img-w">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="CodeHub System" />
+              </div>
+              <div class="horiz-card-meta">
+                <h3>AI Powered DSA Engine</h3>
+                <p>Judge0 remote code execution with Groq LLaMA instant hint generation.</p>
+              </div>
+            </article>
+
+            <!-- Highlight 03 (Callout Quote Card) -->
+            <article class="horiz-card is-callout-card">
+              <div class="callout-card-inner">
+                <span class="quote-symbol">“</span>
+                <p class="callout-quote-text">It doesn’t matter <em>where</em> you start, it’s <em>how</em> you progress from there.</p>
+                <div class="callout-quote-author">
+                  <span class="c-lime font-brier">Muskan Gupta</span>
+                  <span>BUILD • BENCHMARK • DELIVER</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Highlight 04 -->
+            <article class="horiz-card">
+              <div class="horiz-card-tag">DELOITTE, 2025</div>
+              <div class="horiz-card-img-w">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" alt="Data Analytics" />
+              </div>
+              <div class="horiz-card-meta">
+                <h3>Data Analytics Simulation</h3>
+                <p>Exploratory data analysis, statistical modeling, and telemetry dashboards.</p>
+              </div>
+            </article>
+
+            <!-- Highlight 05 -->
+            <article class="horiz-card">
+              <div class="horiz-card-tag">AI AGRICULTURE, 2025</div>
+              <div class="horiz-card-img-w">
+                <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=700&q=80" alt="AgriBot NLP" />
+              </div>
+              <div class="horiz-card-meta">
+                <h3>AI Chatbot for Agriculture</h3>
+                <p>NLP conversational assistant for crop advisory and disease detection.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Split Dual Routes ("ON CODE" vs "OFF CODE") -->
+    <section class="s is-otot-home" id="work">
+      <div class="c">
+        <div class="otot-home-layout">
+          
+          <!-- Route 01: ON CODE -->
+          <a href="#projects" class="otot-col is-1">
+            <div class="otot-col-bg" style="background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="otot-col-overlay"></div>
+            <div class="otot-col-content">
+              <span class="otot-num">01</span>
+              <div class="otot-title-w">
+                <h2 class="text-impact-reg">ON<br/><span class="c-lime">CODE</span></h2>
+              </div>
+              <p class="otot-desc">Full stack applications, AI pipelines, Judge0 execution runners, and high-velocity codebases.</p>
+              <div class="otot-btn-w">
+                <span class="btn-w icon-only" data-theme="lime">
+                  <span class="btn-inner">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Route 02: OFF CODE -->
+          <a href="#offcode" class="otot-col is-2">
+            <div class="otot-col-bg" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="otot-col-overlay"></div>
+            <div class="otot-col-content">
+              <span class="otot-num">02</span>
+              <div class="otot-title-w">
+                <h2 class="text-impact-reg">OFF<br/><span class="c-white">CODE</span></h2>
+              </div>
+              <p class="otot-desc">Certifications, Deloitte data projects, LeetCode problem solving, and technical leadership.</p>
+              <div class="otot-btn-w">
+                <span class="btn-w icon-only">
+                  <span class="btn-inner">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 360° Interactive 3D Lab / Hologram Core (Lando Norris 360 Helmet Feature) -->
+    <section class="s is-3d-lab-section" id="3d-lab" aria-label="3D Interactive Terminal">
+      <div class="c">
+        <div class="title-layout grid-main">
+          <div class="title-headline-w">
+            <span class="text-eyebrow c-lime">INTERACTIVE 360° ENGINE</span>
+            <h2 class="text-title-lg">AI CORE &amp;<br/><span class="span-font-serif c-lime">3D TERMINAL</span></h2>
+          </div>
+          <div class="title-para-w">
+            <p>Drag, rotate, and interact with the 360° holographic computing core. Inspired by motorsport telemetry, digital twins, and autonomous AI systems.</p>
+          </div>
+        </div>
+
+        <!-- 3D Viewport Container -->
+        <div class="lab-3d-wrapper">
+          <!-- Canvas viewport -->
+          <div class="lab-3d-viewport" id="lab3dCanvasContainer">
+            <canvas id="threeCanvas"></canvas>
+            
+            <!-- Floating 360 Drag Prompt Overlay -->
+            <div class="lab-3d-drag-hint" id="dragHint">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="drag-hand-icon">
+                <circle cx="12" cy="12" r="9" stroke-dasharray="4 2"/>
+                <path d="m9 12 3-3 3 3M9 12l3 3 3-3"/>
+              </svg>
+              <span>DRAG MOUSE OR SWIPE TO ROTATE 360°</span>
+            </div>
+
+            <!-- Real-time HUD Telemetry Overlays -->
+            <div class="lab-hud-top-left">
+              <span class="hud-mono-tag"><span class="live-blink"></span> CORE STATUS: ONLINE</span>
+              <span class="hud-sub-val" id="hudCoords">ROT: X 0.00° | Y 0.00°</span>
+              <span class="hud-sub-val">RENDER: WEBGL 3D MATRIX</span>
+            </div>
+
+            <div class="lab-hud-top-right">
+              <span class="hud-mono-tag">NEURAL TELEMETRY</span>
+              <span class="hud-sub-val" id="hudCodeStream">async execute() => { ... }</span>
+              <span class="hud-sub-val">LATENCY: 4.2ms // 60 FPS</span>
+            </div>
+          </div>
+
+          <!-- Interactive 3D Control Bar -->
+          <div class="lab-3d-controls-bar">
+            <!-- Mode Switchers -->
+            <div class="lab-controls-group">
+              <span class="controls-label">3D ARTIFACT:</span>
+              <div class="controls-btns">
+                <button class="lab-mode-btn active" type="button" data-3d-mode="neural">AI NEURAL CORE</button>
+                <button class="lab-mode-btn" type="button" data-3d-mode="terminal">CYBER TERMINAL</button>
+                <button class="lab-mode-btn" type="button" data-3d-mode="wireframe">QUANTUM SPHERE</button>
+              </div>
+            </div>
+
+            <!-- Auto-Spin Toggle -->
+            <div class="lab-controls-group">
+              <span class="controls-label">PHYSICS:</span>
+              <button class="lab-action-btn active" type="button" id="autoSpinBtn">
+                <span class="btn-indicator-dot"></span>
+                <span id="autoSpinLabel">AUTO-SPIN: ON</span>
+              </button>
+              <button class="lab-action-btn" type="button" id="reset3dBtn">RESET 0°</button>
+            </div>
+
+            <!-- Color Palette Pulse -->
+            <div class="lab-controls-group">
+              <span class="controls-label">GLOW COLOR:</span>
+              <div class="color-swatches">
+                <button class="color-swatch-btn active" type="button" data-core-color="#d2ff00" style="background: #d2ff00;" title="Racing Lime"></button>
+                <button class="color-swatch-btn" type="button" data-core-color="#00f2fe" style="background: #00f2fe;" title="Cyber Cyan"></button>
+                <button class="color-swatch-btn" type="button" data-core-color="#ff5f2e" style="background: #ff5f2e;" title="Formula Papaya"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- "Hall of Fame" / Selected Projects (Motorsport Helmet-Style Geometric Cards) -->
+    <section class="s home-helmets" id="projects">
+      <div class="c">
+        <div class="title-layout grid-main">
+          <div class="title-headline-w">
+            <h2 class="text-title-lg">PROJECTS<br/><span class="span-font-serif c-lime">HALL OF FAME</span></h2>
+          </div>
+          <div class="title-para-w">
+            <p>High performance software engineering built with modern frameworks, intelligent APIs, and scalable databases.</p>
+          </div>
+        </div>
+
+        <div class="helmet-grid">
+          
+          <!-- Project Card 01: CodeHub -->
+          <article class="helmet-grid-item-w">
+            <div class="helmet-grid-item">
+              <!-- Geometric SVG Framing -->
+              <div class="helmet-grid-frame">
+                <svg width="100%" height="100%" viewBox="0 0 407 411" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                  <path d="M8 1h390.9a7 7 0 0 1 7 7v357a7 7 0 0 1-7 7H263.3a24 24 0 0 0-18.8 9l-16.5 20.7a22 22 0 0 1-17.1 8.3H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" stroke="var(--color--lime)" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="helmet-grid-item-img-w">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="CodeHub DSA Platform" class="project-img-base" />
+              </div>
+              <div class="helmet-grid-item-text-w">
+                <div class="project-header-row">
+                  <h3 class="text-title-small-label">CodeHub - AI DSA Platform</h3>
+                  <span class="project-year-badge">2026</span>
+                </div>
+                <p class="project-summary">Interactive DSA practice platform featuring Judge0 execution engine, Groq LLaMA AI debugging hints, problem curation, and live ranking leaderboard.</p>
+                <div class="project-tech-tags">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>Judge0 API</span>
+                  <span>Groq AI</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/mg8881154-glitch/Code-hub" target="_blank" rel="noreferrer" class="btn-w is-sm" data-theme="lime">
+                    <span class="btn-inner"><span class="btn-text">VIEW REPOSITORY</span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 02: AI Agriculture Chatbot -->
+          <article class="helmet-grid-item-w">
+            <div class="helmet-grid-item">
+              <div class="helmet-grid-frame">
+                <svg width="100%" height="100%" viewBox="0 0 407 411" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                  <path d="M8 1h390.9a7 7 0 0 1 7 7v357a7 7 0 0 1-7 7H263.3a24 24 0 0 0-18.8 9l-16.5 20.7a22 22 0 0 1-17.1 8.3H8a7 7 0 0 1-7-7V8a7 7 0 0 1 7-7Z" stroke="var(--color--lime)" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="helmet-grid-item-img-w">
+                <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=800&q=80" alt="Agriculture Chatbot" class="project-img-base" />
+              </div>
+              <div class="helmet-grid-item-text-w">
+                <div class="project-header-row">
+                  <h3 class="text-title-small-label">AI Agri-Advisory Chatbot</h3>
+                  <span class="project-year-badge">2025</span>
+                </div>
+                <p class="project-summary">Intelligent conversational bot for farmers and agriculturalists providing real-time crop disease diagnosis, yield recommendations, and fertilizer guidance.</p>
+                <div class="project-tech-tags">
+                  <span>Python</span>
+                  <span>NLP</span>
+                  <span>Scikit-Learn</span>
+                  <span>REST API</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/mg8881154-glitch" target="_blank" rel="noreferrer" class="btn-w is-sm" data-theme="lime">
+                    <span class="btn-inner"><span class="btn-text">EXPLORE REPO</span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Career & Education Calendar (F1 Grand Prix Style Schedule UI) -->
+    <section class="s is-calendar-section" id="calendar">
+      <div class="c">
+        <div class="title-layout grid-main">
+          <div class="title-headline-w">
+            <span class="text-eyebrow c-lime">CHAMPIONSHIP SCHEDULE</span>
+            <h2 class="text-title-lg">CAREER<br/><span class="span-font-serif c-lime">GRAND PRIX</span></h2>
+          </div>
+          <div class="title-para-w">
+            <p>Chronological journey of engineering experience, degree curriculum, and industry certifications.</p>
+          </div>
+        </div>
+
+        <div class="calendar-table">
+          
+          <!-- Round 01 -->
+          <div class="calendar-row active" tabindex="0">
+            <div class="cal-col-round">
+              <span class="cal-round-pill">ROUND 01</span>
+              <span class="cal-year">2026</span>
+            </div>
+            <div class="cal-col-title">
+              <div class="cal-gp-name">ZETHETA ALGORITHMS GRAND PRIX</div>
+              <div class="cal-gp-role">Full Stack Development Intern • Web Architecture &amp; REST APIs</div>
+            </div>
+            <div class="cal-col-status">
+              <span class="status-badge is-win">COMPLETED INTERNSHIP 🏆</span>
+            </div>
+            <div class="cal-col-link">
+              <a href="https://www.zetheta.com/certificate/94597861/" target="_blank" rel="noreferrer" class="cal-cert-link">VERIFY CERTIFICATE ↗</a>
+            </div>
+          </div>
+
+          <!-- Round 02 -->
+          <div class="calendar-row" tabindex="0">
+            <div class="cal-col-round">
+              <span class="cal-round-pill">ROUND 02</span>
+              <span class="cal-year">2025</span>
+            </div>
+            <div class="cal-col-title">
+              <div class="cal-gp-name">DELOITTE DATA ANALYTICS GRAND PRIX</div>
+              <div class="cal-gp-role">Virtual Internship Simulation • Forensic Analytics &amp; Strategy</div>
+            </div>
+            <div class="cal-col-status">
+              <span class="status-badge is-podium">CERTIFIED ✦</span>
+            </div>
+            <div class="cal-col-link">
+              <span class="cal-meta-text">Deloitte Global / Forage</span>
+            </div>
+          </div>
+
+          <!-- Round 03 -->
+          <div class="calendar-row" tabindex="0">
+            <div class="cal-col-round">
+              <span class="cal-round-pill">ROUND 03</span>
+              <span class="cal-year">2025</span>
+            </div>
+            <div class="cal-col-title">
+              <div class="cal-gp-name">YUVA AI &amp; DJANGO SKILL UP</div>
+              <div class="cal-gp-role">National AI Training • Backend Python Framework Mastery</div>
+            </div>
+            <div class="cal-col-status">
+              <span class="status-badge is-podium">CERTIFIED ✦</span>
+            </div>
+            <div class="cal-col-link">
+              <span class="cal-meta-text">Yuva AI For All</span>
+            </div>
+          </div>
+
+          <!-- Round 04 -->
+          <div class="calendar-row" tabindex="0">
+            <div class="cal-col-round">
+              <span class="cal-round-pill">ROUND 04</span>
+              <span class="cal-year">2024 - 2028</span>
+            </div>
+            <div class="cal-col-title">
+              <div class="cal-gp-name">GALGOTIAS COLLEGE OF ENGINEERING AND TECHNOLOGY</div>
+              <div class="cal-gp-role">B.Tech in Computer Science &amp; Data Science • Greater Noida</div>
+            </div>
+            <div class="cal-col-status">
+              <span class="status-badge is-ongoing">IN PROGRESS 🏎️</span>
+            </div>
+            <div class="cal-col-link">
+              <span class="cal-meta-text">Undergraduate Program</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Telemetry Statistics HUD (Lando Store / Speed Stats) -->
+    <section class="s is-telemetry-hud" id="offcode">
+      <div class="c">
+        <div class="hud-box">
+          <div class="hud-top-bar">
+            <span class="hud-label">TELEMETRY SENSORS</span>
+            <span class="hud-live-tag"><span class="live-blink"></span> LIVE ENGINE DATA</span>
+          </div>
+          
+          <div class="hud-grid">
+            <div class="hud-stat-item">
+              <div class="hud-val-w">
+                <span class="hud-val" data-count="4">0</span>
+                <span class="hud-unit">+</span>
+              </div>
+              <span class="hud-caption">CORE LANGUAGES (PYTHON, JS, C, C++)</span>
+            </div>
+
+            <div class="hud-stat-item">
+              <div class="hud-val-w">
+                <span class="hud-val" data-count="6">0</span>
+                <span class="hud-unit">+</span>
+              </div>
+              <span class="hud-caption">CERTIFIED INDUSTRY PROGRAMS</span>
+            </div>
+
+            <div class="hud-stat-item">
+              <div class="hud-val-w">
+                <span class="hud-val" data-count="100">0</span>
+                <span class="hud-unit">%</span>
+              </div>
+              <span class="hud-caption">COMMITMENT TO HIGH SPEED REFACTORING</span>
+            </div>
+
+            <div class="hud-stat-item">
+              <div class="hud-val-w">
+                <span class="hud-val" data-count="2026">0</span>
+              </div>
+              <span class="hud-caption">ACTIVE PRODUCTION INTERNSHIP YEAR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Toolkit & Tech Marquee ("Partners & Campaigns" Style) -->
+    <section class="s is-home-collabs" id="toolkit">
+      <div class="c">
+        <div class="title-layout grid-main">
+          <div class="title-headline-w">
+            <h2 class="text-title-lg">TECHNICAL<br/><span class="span-font-serif c-lime">TOOLKIT</span></h2>
+          </div>
+          <div class="title-para-w">
+            <p>Proven technologies used to architect full-stack web applications, AI models, and real-time backend pipelines.</p>
+          </div>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-badge"><span>Python</span></div>
+          <div class="tech-badge"><span>JavaScript (ES6+)</span></div>
+          <div class="tech-badge"><span>React.js</span></div>
+          <div class="tech-badge"><span>Node.js</span></div>
+          <div class="tech-badge"><span>Django</span></div>
+          <div class="tech-badge"><span>REST APIs</span></div>
+          <div class="tech-badge"><span>Judge0 Remote Exec</span></div>
+          <div class="tech-badge"><span>Groq LLaMA</span></div>
+          <div class="tech-badge"><span>MongoDB</span></div>
+          <div class="tech-badge"><span>MySQL</span></div>
+          <div class="tech-badge"><span>C / C++</span></div>
+          <div class="tech-badge"><span>Machine Learning</span></div>
+          <div class="tech-badge"><span>Git &amp; GitHub</span></div>
+          <div class="tech-badge"><span>Vercel Deploy</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- COCKPIT MODE — Interactive Live Terminal / Code Playground -->
+    <!-- ========================================================= -->
+    <section class="s is-cockpit-terminal" id="terminal" aria-label="Cockpit Terminal">
+      <div class="c">
+        <div class="title-layout grid-main">
+          <div class="title-headline-w">
+            <span class="text-eyebrow c-lime">COCKPIT MODE</span>
+            <h2 class="text-title-lg">LIVE<br/><span class="span-font-serif c-lime">TERMINAL</span></h2>
+          </div>
+          <div class="title-para-w">
+            <p>Interact with Muskan's portfolio like a developer. Type commands into the terminal below — because the best interfaces are built for builders.</p>
+          </div>
+        </div>
+
+        <div class="cockpit-layout">
+          <!-- Left: description + hint list -->
+          <div class="cockpit-desc">
+            <div>
+              <p class="text-body" style="color: rgba(255,255,255,0.6); line-height: 1.75;">This is your command cockpit. No GUI, no fluff. Type a command and hit <strong style="color:var(--color--lime)">Enter</strong> or press <strong style="color:var(--color--lime)">RUN</strong> to execute.</p>
+            </div>
+            <div class="cockpit-command-hints">
+              <span class="controls-label" style="margin-bottom:0.25rem;">AVAILABLE COMMANDS</span>
+              <div class="cockpit-hint-item"><code>muskan.getSkills()</code><span>→ Returns my full tech stack</span></div>
+              <div class="cockpit-hint-item"><code>muskan.getProjects()</code><span>→ Lists all projects</span></div>
+              <div class="cockpit-hint-item"><code>run codehub</code><span>→ Opens CodeHub on GitHub</span></div>
+              <div class="cockpit-hint-item"><code>cat resume.pdf</code><span>→ Shows resume details</span></div>
+              <div class="cockpit-hint-item"><code>contact --email</code><span>→ Opens email client</span></div>
+              <div class="cockpit-hint-item"><code>muskan.getSocials()</code><span>→ All social links</span></div>
+              <div class="cockpit-hint-item"><code>whoami</code><span>→ About Muskan</span></div>
+              <div class="cockpit-hint-item"><code>help</code><span>→ Show all commands</span></div>
+              <div class="cockpit-hint-item"><code>clear</code><span>→ Clear terminal</span></div>
+            </div>
+          </div>
+
+          <!-- Right: Terminal Window -->
+          <div class="terminal-window" id="cockpitTerminal">
+            <div class="terminal-titlebar">
+              <span class="term-dot close"></span>
+              <span class="term-dot min"></span>
+              <span class="term-dot expand"></span>
+              <span class="terminal-titlebar-label">muskan@portfolio ~ — bash</span>
+            </div>
+            <div class="terminal-output" id="termOutput">
+              <div class="term-line output info">Welcome to Muskan's Portfolio Terminal v2.0.26</div>
+              <div class="term-line output info">Type <span style="color:var(--color--lime)">'help'</span> to see available commands.</div>
+              <div class="term-line output" style="opacity:0.4">─────────────────────────────────────</div>
+            </div>
+            <div class="terminal-input-row">
+              <span class="term-prompt-symbol">muskan@portfolio:~$</span>
+              <input type="text" class="term-input" id="termInput" placeholder="type a command..." autocomplete="off" spellcheck="false" aria-label="Terminal input" />
+              <button class="term-submit-btn" id="termRun" type="button">RUN</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================== -->
+    <!-- DIGITAL VAULT — Developer Toolkit  -->
+    <!-- ================================== -->
+    <section class="s is-digital-vault" id="vault" aria-label="Digital Vault">
+      <div class="c">
+        <div class="title-layout grid-main">
+          <div class="title-headline-w">
+            <span class="text-eyebrow c-lime">FREE DEVELOPER RESOURCES</span>
+            <h2 class="text-title-lg">DIGITAL<br/><span class="span-font-serif c-lime">VAULT</span></h2>
+          </div>
+          <div class="title-para-w">
+            <p>Muskan's curated developer toolkit. Free resources, templates, and cheat sheets — no paywalls, no gatekeeping. Just open source everything.</p>
+          </div>
+        </div>
+
+        <div class="vault-grid">
+
+          <!-- Card 1: Resume Download -->
+          <a href="resume.pdf" download="Muskan_Gupta_Resume.pdf" class="vault-card vault-card--download" style="text-decoration:none;display:flex;flex-direction:column;gap:1rem;">
+            <div class="vault-card-icon">📄</div>
+            <span class="vault-card-tag">INSTANT DOWNLOAD</span>
+            <h3 class="vault-card-title">Resume PDF</h3>
+            <p class="vault-card-desc">One-click download of Muskan's full developer resume — updated 2026. ATS-friendly format, clean layout, CS + AI focus.</p>
+            <span class="vault-card-action" style="pointer-events:none;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              DOWNLOAD RESUME
+            </span>
+          </a>
+
+          <!-- Card 2: DSA Cheat Sheets -->
+          <div class="vault-card">
+            <span class="vault-badge-soon">COMING SOON</span>
+            <div class="vault-card-icon">📑</div>
+            <span class="vault-card-tag">STUDY RESOURCE</span>
+            <h3 class="vault-card-title">DSA Cheat Sheets</h3>
+            <p class="vault-card-desc">Curated by Muskan — Arrays, Trees, Graphs, DP patterns, sorting algorithms, and time-complexity quick-reference cards.</p>
+            <a href="https://github.com/mg8881154-glitch" target="_blank" rel="noreferrer" class="vault-card-action">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              EXPLORE GITHUB
+            </a>
+          </div>
+
+          <!-- Card 3: Open Source Starter Templates -->
+          <div class="vault-card">
+            <span class="vault-badge-soon">COMING SOON</span>
+            <div class="vault-card-icon">🚀</div>
+            <span class="vault-card-tag">STARTER KIT</span>
+            <h3 class="vault-card-title">Open-Source Templates</h3>
+            <p class="vault-card-desc">Production-ready project starters: Full-stack React + Node, Django REST API, ML pipeline boilerplate, and more.</p>
+            <a href="https://github.com/mg8881154-glitch" target="_blank" rel="noreferrer" class="vault-card-action">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              VIEW ON GITHUB
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- What's Up On Socials Media Grid (Exact Lando Norris Socials Style) -->
+
+    <section class="s is-callout-socials">
+      <div class="c">
+        <div class="callout-socials-header">
+          <span class="text-eyebrow c-lime">CONNECT &amp; FOLLOW</span>
+          <h2 class="text-title-lg">WHAT'S UP<br/><span class="span-font-serif c-lime">ON SOCIALS</span></h2>
+        </div>
+
+        <div class="callout-socials-card-layout">
+          
+          <a href="https://github.com/mg8881154-glitch" target="_blank" rel="noreferrer" class="social-card">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=80" alt="GitHub Repos" />
+            <div class="social-card-overlay">
+              <span class="social-card-platform">GITHUB</span>
+              <span class="social-card-handle">@mg8881154-glitch</span>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/muskan-gupta-616120365" target="_blank" rel="noreferrer" class="social-card">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="LinkedIn Profile" />
+            <div class="social-card-overlay">
+              <span class="social-card-platform">LINKEDIN</span>
+              <span class="social-card-handle">Muskan Gupta</span>
+            </div>
+          </a>
+
+          <a href="https://leetcode.com/u/DTHmIJBrp9/" target="_blank" rel="noreferrer" class="social-card">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=600&q=80" alt="LeetCode" />
+            <div class="social-card-overlay">
+              <span class="social-card-platform">LEETCODE</span>
+              <span class="social-card-handle">DSA Problem Solver</span>
+            </div>
+          </a>
+
+          <a href="mailto:mg8881154@gmail.com" class="social-card">
+            <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=600&q=80" alt="Direct Email" />
+            <div class="social-card-overlay">
+              <span class="social-card-platform">EMAIL INBOX</span>
+              <span class="social-card-handle">mg8881154@gmail.com</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Iconic Lando Norris Curved Mask Footer -->
+    <footer class="s is-footer" id="contact">
+      <div class="c is-footer">
+        
+        <!-- Curved Footer Mask Wrapper -->
+        <div class="footer-layout-clip">
+          <div class="footer-inner-layout">
+            
+            <!-- Left Columns Sitemap -->
+            <div class="footer-links-w">
+              <div class="footer-links-col">
+                <span class="text-eyebrow c-lime">PAGE DIRECTORY</span>
+                <div class="footer-links-layout">
+                  <a href="#home" class="footer-nav-link">Home</a>
+                  <a href="#work" class="footer-nav-link">On Code</a>
+                  <a href="#offcode" class="footer-nav-link">Off Code</a>
+                  <a href="#projects" class="footer-nav-link">Hall of Fame</a>
+                  <a href="#calendar" class="footer-nav-link">Calendar</a>
+                  <a href="#toolkit" class="footer-nav-link">Toolkit</a>
+                </div>
+              </div>
+
+              <div class="footer-links-col">
+                <span class="text-eyebrow c-lime">CHANNELS</span>
+                <div class="footer-links-layout">
+                  <a href="https://github.com/mg8881154-glitch" target="_blank" rel="noreferrer" class="footer-nav-link">GitHub Archive</a>
+                  <a href="https://www.linkedin.com/in/muskan-gupta-616120365" target="_blank" rel="noreferrer" class="footer-nav-link">LinkedIn Network</a>
+                  <a href="https://leetcode.com/u/DTHmIJBrp9/" target="_blank" rel="noreferrer" class="footer-nav-link">LeetCode Tracker</a>
+                  <a href="https://www.zetheta.com/certificate/94597861/" target="_blank" rel="noreferrer" class="footer-nav-link">Zetheta Credential</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Giant Footer Statement & Signature -->
+            <div class="footer-statement-w">
+              <div class="footer-signature-w">
+                <svg class="footer-sig-svg" viewBox="0 0 260 70" fill="none">
+                  <path d="M10 40 Q 50 5 90 35 T 150 30 T 210 20 Q 240 10 250 40" stroke="var(--color--lime)" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <h2 class="footer-statement-title">
+                ALWAYS <span class="c-lime font-brier">BRINGING</span> THE <span class="c-lime font-brier">FIGHT</span>.
+              </h2>
+              <p class="footer-statement-sub">Ready to build the next remarkable software experience.</p>
+              <div class="footer-cta-w">
+                <button type="button" class="btn-w is-footer-cta" data-theme="lime" id="footerHireBtn">
+                  <span class="btn-inner">
+                    <span class="btn-text">BUSINESS &amp; HIRING ENQUIRIES</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Footer Ticker Tape -->
+            <div class="footer-marquee" aria-hidden="true">
+              <div class="footer-marquee-track">
+                <span>MUSKAN GUPTA 2026</span>
+                <span>•</span>
+                <span>FULL STACK DEVELOPER</span>
+                <span>•</span>
+                <span>AI BUILDER</span>
+                <span>•</span>
+                <span>GALGOTIAS COLLEGE OF ENGINEERING AND TECHNOLOGY</span>
+                <span>•</span>
+                <span>HIGH SPEED ARCHITECTURE</span>
+                <span>•</span>
+                <span>MUSKAN GUPTA 2026</span>
+                <span>•</span>
+                <span>FULL STACK DEVELOPER</span>
+                <span>•</span>
+                <span>AI BUILDER</span>
+              </div>
+            </div>
+
+            <!-- Copyright Bar -->
+            <div class="footer-bottom-bar">
+              <p>© 2026 Muskan Gupta. Designed in homage to modern motorsport editorial aesthetics.</p>
+              <a href="#home" class="back-to-top-btn" title="Back to top">
+                <span>BACK TO TOP</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 19V5M5 12l7-7 7 7"/>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- PIT RADIO MODAL — INTERACTIVE CONTACT FORM                   -->
+  <!-- ============================================================ -->
+  <div class="pit-radio-overlay" id="pitRadioOverlay" role="dialog" aria-modal="true" aria-label="Pit Radio Contact" aria-hidden="true">
+    <div class="pit-radio-backdrop" id="pitRadioBackdrop"></div>
+    <div class="pit-radio-modal">
+
+      <!-- Modal Header -->
+      <div class="pit-radio-header">
+        <div class="pit-radio-header-left">
+          <div class="pit-radio-signal">
+            <span class="pit-signal-dot"></span>
+            <span class="pit-signal-dot"></span>
+            <span class="pit-signal-dot"></span>
+          </div>
+          <div>
+            <span class="text-eyebrow c-lime" style="font-size:0.65rem;">OPEN CHANNEL</span>
+            <h3 class="pit-radio-title">PIT RADIO</h3>
+          </div>
+        </div>
+        <button class="pit-radio-close" id="pitRadioClose" type="button" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Modal Telemetry Bar -->
+      <div class="pit-radio-telemetry">
+        <span>FREQ: 134.7 MHz</span>
+        <span>STATUS: READY TO RECEIVE</span>
+        <span>ENC: AES-256</span>
+      </div>
+
+      <!-- Direct contact row -->
+      <div class="pit-radio-direct">
+        <a href="tel:+918881154611" class="pit-direct-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.57 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.76a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 88811 54611
+        </a>
+        <span class="pit-direct-sep">|</span>
+        <a href="mailto:mg8881154@gmail.com" class="pit-direct-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          mg8881154@gmail.com
+        </a>
+      </div>
+
+      <!-- Form -->
+      <form class="pit-radio-form" id="pitRadioForm" novalidate>
+        <div class="pit-form-row pit-form-row--2">
+          <div class="pit-field-group">
+            <label class="pit-label" for="pitName">YOUR NAME</label>
+            <input class="pit-input" id="pitName" name="name" type="text" placeholder="e.g. Rahul Sharma" required autocomplete="name" />
+          </div>
+          <div class="pit-field-group">
+            <label class="pit-label" for="pitEmail">EMAIL ADDRESS</label>
+            <input class="pit-input" id="pitEmail" name="email" type="email" placeholder="rahul@example.com" required autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="pit-field-group">
+          <label class="pit-label" for="pitSubject">SUBJECT / ROLE</label>
+          <input class="pit-input" id="pitSubject" name="subject" type="text" placeholder="e.g. Frontend Developer Internship" />
+        </div>
+
+        <div class="pit-field-group">
+          <label class="pit-label" for="pitMessage">MESSAGE <span style="color:rgba(255,255,255,0.35)">— BE DIRECT, LIKE A PIT CREW</span></label>
+          <textarea class="pit-textarea" id="pitMessage" name="message" rows="4" placeholder="Hi Muskan, I'd love to discuss..." required></textarea>
+        </div>
+
+        <!-- Submit row -->
+        <div class="pit-submit-row">
+          <div class="pit-char-count" id="pitCharCount">0 / 500</div>
+          <button type="submit" class="btn-w pit-submit-btn" data-theme="lime" id="pitSubmit">
+            <span class="btn-inner">
+              <span class="btn-text" id="pitSubmitLabel">TRANSMIT MESSAGE</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Success State (hidden by default) -->
+      <div class="pit-success-state" id="pitSuccess" aria-hidden="true">
+        <div class="pit-success-icon">✓</div>
+        <h4 class="pit-success-title">MESSAGE TRANSMITTED</h4>
+        <p class="pit-success-sub">Roger that! Muskan will respond on frequency <strong>mg8881154@gmail.com</strong>. Stand by.</p>
+        <div class="pit-success-telemetry">
+          <span>SIGNAL: STRONG</span>
+          <span>DELIVERY: CONFIRMED</span>
+          <span>ETA: &lt;24H</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

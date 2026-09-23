@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muskan Gupta — Resume | Full Stack Developer & AI Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --lime: #a8cc00;
+      --lime-light: #d2ff00;
+      --dark: #060805;
+      --grey-dark: #1a1f17;
+      --grey-mid: #4a5240;
+      --grey-light: #7a8470;
+      --body: #2d342a;
+      --border: #d4d9ce;
+      --bg: #fafbf8;
+      --white: #ffffff;
+      --accent-bg: #f4f7ee;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+
+    html { font-size: 16px; background: #e8ede4; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--body);
+      background: #e8ede4;
+      min-height: 100vh;
+      padding: 2rem 1rem 4rem;
+    }
+
+    /* Action Bar */
+    .action-bar {
+      max-width: 860px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .action-bar-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--grey-mid);
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: var(--white);
+      transition: all 0.2s ease;
+    }
+
+    .action-bar-back:hover { border-color: var(--lime); color: var(--lime); }
+
+    .action-bar-btns { display: flex; align-items: center; gap: 0.75rem; }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-download.primary { background: #1a1f17; color: #d2ff00; }
+    .btn-download.primary:hover { background: #000; transform: translateY(-2px); }
+    .btn-download.secondary { background: var(--white); color: var(--grey-mid); border: 1px solid var(--border); }
+    .btn-download.secondary:hover { border-color: var(--lime); color: var(--lime); }
+
+    /* Resume Sheet */
+    .resume-sheet {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.12);
+    }
+
+    /* Header */
+    .resume-header {
+      background: var(--dark);
+      padding: 2.5rem 3rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .resume-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #d2ff00 0%, #a8cc00 50%, transparent 100%);
+    }
+
+    .resume-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .resume-name span { color: #d2ff00; }
+
+    .resume-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(210, 255, 0, 0.7);
+      margin-bottom: 1.5rem;
+    }
+
+    .resume-contact-row { display: flex; flex-wrap: wrap; gap: 1rem 2rem; }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .contact-item:hover { color: #d2ff00; }
+    .contact-item svg { flex-shrink: 0; opacity: 0.6; }
+
+    /* Body Layout */
+    .resume-body {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+    }
+
+    .resume-main {
+      padding: 2.25rem 2.5rem 2.5rem;
+      border-right: 1px solid var(--border);
+    }
+
+    .resume-side {
+      padding: 2.25rem 2rem 2.5rem;
+      background: var(--accent-bg);
+    }
+
+    /* Section */
+    .section { margin-bottom: 2rem; }
+    .section:last-child { margin-bottom: 0; }
+
+    .section-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--lime);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+    }
+
+    /* Summary */
+    .summary-text { font-size: 0.9rem; line-height: 1.7; color: var(--grey-mid); }
+    .summary-text strong { color: var(--body); font-weight: 600; }
+
+    /* Experience */
+    .exp-item { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+    .exp-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.3rem;
+      flex-wrap: wrap;
+    }
+
+    .exp-role {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .exp-date {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--lime);
+      background: rgba(168, 204, 0, 0.1);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .exp-company { font-size: 0.85rem; font-weight: 600; color: var(--grey-mid); margin-bottom: 0.6rem; }
+
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+
+    .exp-bullets li {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: #4a5240;
+      padding-left: 1.1rem;
+      position: relative;
+    }
+
+    .exp-bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--lime);
+      font-size: 0.7rem;
+      top: 0.15rem;
+    }
+
+    /* Projects */
+    .project-item {
+      margin-bottom: 1.25rem;
+      padding: 1rem 1.25rem;
+      background: var(--accent-bg);
+      border-radius: 8px;
+      border-left: 3px solid var(--lime);
+    }
+
+    .project-item:last-child { margin-bottom: 0; }
+
+    .project-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .project-stack {
+      font-size: 0.76rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: var(--grey-mid);
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+
+    .project-link {
+      font-size: 0.72rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: var(--lime);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+
+    .project-link:hover { text-decoration: underline; }
+
+    .exp-bullets.compact li { font-size: 0.83rem; }
+
+    /* Side: Skills */
+    .skill-group { margin-bottom: 1.25rem; }
+
+    .skill-group-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--grey-mid);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-list { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
+    .skill-chip {
+      font-size: 0.78rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: var(--dark);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.25rem 0.6rem;
+    }
+
+    /* Side: Education */
+    .edu-item { margin-bottom: 1.25rem; }
+
+    .edu-degree {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.3;
+      margin-bottom: 0.2rem;
+    }
+
+    .edu-school { font-size: 0.8rem; color: var(--grey-mid); font-weight: 500; margin-bottom: 0.15rem; }
+
+    .edu-date {
+      font-size: 0.72rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      color: var(--lime);
+      letter-spacing: 0.08em;
+    }
+
+    /* Side: Certifications */
+    .cert-item { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.85rem; }
+
+    .cert-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--lime);
+      flex-shrink: 0;
+      margin-top: 0.3rem;
+    }
+
+    .cert-name { font-size: 0.82rem; font-weight: 600; color: var(--dark); line-height: 1.3; }
+    .cert-org { font-size: 0.72rem; color: var(--grey-mid); margin-top: 0.1rem; }
+
+    /* Side: Links */
+    .link-item { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; text-decoration: none; }
+    .link-item-label { font-family: 'Space Grotesk', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--dark); min-width: 70px; }
+    .link-item-value { font-size: 0.78rem; color: var(--grey-mid); word-break: break-all; }
+    .link-item:hover .link-item-value { color: var(--lime); }
+
+    /* Leadership */
+    .lead-item { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.6rem; }
+    .lead-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--lime); flex-shrink: 0; margin-top: 0.4rem; }
+    .lead-text { font-size: 0.82rem; color: var(--grey-mid); line-height: 1.4; }
+
+    /* Footer */
+    .resume-footer {
+      padding: 1rem 3rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .resume-footer-note { font-size: 0.72rem; color: var(--grey-light); font-family: 'Space Grotesk', sans-serif; letter-spacing: 0.08em; }
+    .resume-footer-badge { font-family: 'Space Grotesk', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lime); }
+
+    /* Print */
+    @media print {
+      body { background: white; padding: 0; }
+      .action-bar { display: none !important; }
+      .resume-sheet { box-shadow: none; border-radius: 0; max-width: 100%; }
+      .resume-body { grid-template-columns: 1fr 240px; }
+      @page { margin: 0.5in; size: A4; }
+      .resume-header, .exp-date, .edu-date, .cert-dot, .section-label, .project-link {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .resume-body { grid-template-columns: 1fr; }
+      .resume-main { border-right: none; padding: 1.5rem; }
+      .resume-side { padding: 1.5rem; border-top: 1px solid var(--border); }
+      .resume-header { padding: 2rem 1.5rem 1.5rem; }
+      .resume-footer { padding: 1rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Action Bar -->
+  <div class="action-bar">
+    <a href="index.html" class="action-bar-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Portfolio
+    </a>
+    <div class="action-bar-btns">
+      <button class="btn-download secondary" onclick="window.print()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print / Save PDF
+      </button>
+      <a href="resume.pdf" download="Muskan_Gupta_Resume.pdf" class="btn-download primary">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download PDF
+      </a>
+    </div>
+  </div>
+
+  <!-- Resume Sheet -->
+  <div class="resume-sheet">
+
+    <!-- Header -->
+    <header class="resume-header">
+      <div class="resume-name">MUSKAN <span>GUPTA</span></div>
+      <div class="resume-title">Full Stack Developer &amp; AI Builder</div>
+      <div class="resume-contact-row">
+        <a href="tel:+918881154611" class="contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.57 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.76a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +91 8881154611
+        </a>
+        <a href="mailto:mg8881154@gmail.com" class="contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          mg8881154@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/muskan-gupta-616120365" target="_blank" class="contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/mg8881154-glitch" target="_blank" class="contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="https://leetcode.com/u/DTHmIJBrp9/" target="_blank" class="contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          LeetCode
+        </a>
+      </div>
+    </header>
+
+    <!-- Body -->
+    <div class="resume-body">
+
+      <!-- Main Column -->
+      <main class="resume-main">
+
+        <!-- Professional Summary -->
+        <div class="section">
+          <div class="section-label">Professional Summary</div>
+          <p class="summary-text">
+            <strong>Computer Science &amp; Data Science</strong> undergraduate at Galgotias College of Engineering and Technology with experience in Full Stack Development, AI applications, and Data Analytics. Skilled in <strong>Python, JavaScript, React.js, Node.js, REST APIs, MongoDB, and Machine Learning</strong>. Passionate about building scalable software and solving real-world engineering problems.
+          </p>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+          <div class="section-label">Experience</div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <div class="exp-role">Full Stack Development Intern</div>
+              <div class="exp-date">Jun 2026 – Jul 2026</div>
+            </div>
+            <div class="exp-company">Zetheta Algorithms Private Limited</div>
+            <ul class="exp-bullets">
+              <li>Developed and enhanced full-stack web application features.</li>
+              <li>Integrated REST APIs and collaborated on frontend/backend systems.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+          <div class="section-label">Projects</div>
+
+          <div class="project-item">
+            <div class="project-name">
+              CodeHub – AI Powered DSA Practice Platform
+              <a href="https://github.com/mg8881154-glitch" target="_blank" class="project-link">GitHub ↗</a>
+            </div>
+            <div class="project-stack">Ongoing</div>
+            <ul class="exp-bullets compact">
+              <li>Built a full-stack DSA platform with authentication and real-time code execution using Judge0 API.</li>
+              <li>Integrated AI-powered DSA assistant and mock interviewer using Groq LLaMA models.</li>
+              <li>Developed leaderboard, progress tracking, analytics dashboard, and discussion features.</li>
+            </ul>
+          </div>
+
+          <div class="project-item">
+            <div class="project-name">
+              AI Chatbot for Agriculture
+            </div>
+            <div class="project-stack">Python | NLP | Machine Learning | REST APIs</div>
+            <ul class="exp-bullets compact">
+              <li>Developed an AI chatbot for crop management guidance and farmer support.</li>
+              <li>Implemented NLP-based query processing and REST API integration.</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </main>
+
+      <!-- Side Column -->
+      <aside class="resume-side">
+
+        <!-- Education -->
+        <div class="section">
+          <div class="section-label">Education</div>
+
+          <div class="edu-item">
+            <div class="edu-degree">B.Tech – Computer Science &amp; Data Science</div>
+            <div class="edu-school">Galgotias College of Engineering and Technology, Greater Noida</div>
+            <div class="edu-date">2024 – 2028</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-degree">Class XII</div>
+            <div class="edu-school">Durga Intermediate College, Raebareli</div>
+            <div class="edu-date">2023 – 2024</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-degree">Class X</div>
+            <div class="edu-school">Durga Intermediate College, Raebareli</div>
+            <div class="edu-date">2021 – 2022</div>
+          </div>
+
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+          <div class="section-label">Technical Skills</div>
+
+          <div class="skill-group">
+            <div class="skill-group-name">Languages</div>
+            <div class="skill-list">
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">C</span>
+              <span class="skill-chip">C++</span>
+              <span class="skill-chip">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-name">Frontend</div>
+            <div class="skill-list">
+              <span class="skill-chip">React.js</span>
+              <span class="skill-chip">HTML</span>
+              <span class="skill-chip">CSS</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-name">Backend</div>
+            <div class="skill-list">
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">Django</span>
+              <span class="skill-chip">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-name">Database</div>
+            <div class="skill-list">
+              <span class="skill-chip">MongoDB</span>
+              <span class="skill-chip">MySQL</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-name">Tools</div>
+            <div class="skill-list">
+              <span class="skill-chip">Git</span>
+              <span class="skill-chip">GitHub</span>
+              <span class="skill-chip">VS Code</span>
+              <span class="skill-chip">Vercel</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+          <div class="section-label">Certifications</div>
+
+          <div class="cert-item">
+            <div class="cert-dot"></div>
+            <div>
+              <div class="cert-name">Deloitte Data Analytics Job Simulation</div>
+              <div class="cert-org">Deloitte · 2025</div>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-dot"></div>
+            <div>
+              <div class="cert-name">CodeAlpha Full Stack Development Internship + LOR</div>
+              <div class="cert-org">CodeAlpha · 2026</div>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-dot"></div>
+            <div>
+              <div class="cert-name">Django Skill Up</div>
+              <div class="cert-org">GeeksforGeeks · 2025</div>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-dot"></div>
+            <div>
+              <div class="cert-name">Yuva AI For All</div>
+              <div class="cert-org">Nation SkillUp · 2025</div>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-dot"></div>
+            <div>
+              <div class="cert-name">QuizOff 2026 – India's Biggest AI Quiz</div>
+              <div class="cert-org">CampusCrew &amp; Unstop</div>
+            </div>
+          </div>
+
+          <div class="cert-item">
+            <div class="cert-dot"></div>
+            <div>
+              <div class="cert-name">Zetheta Internship Certificate</div>
+              <div class="cert-org"><a href="https://www.zetheta.com/certificate/94597861/" target="_blank" style="color:var(--lime);text-decoration:none;">Verify ↗</a></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Leadership & Activities -->
+        <div class="section">
+          <div class="section-label">Leadership &amp; Activities</div>
+
+          <div class="lead-item">
+            <div class="lead-dot"></div>
+            <div class="lead-text">Coordinator – Arambh</div>
+          </div>
+          <div class="lead-item">
+            <div class="lead-dot"></div>
+            <div class="lead-text">Member – Kalakrati Drawing Team</div>
+          </div>
+          <div class="lead-item">
+            <div class="lead-dot"></div>
+            <div class="lead-text">Scout &amp; Guide (District and State Level Camps)</div>
+          </div>
+          <div class="lead-item">
+            <div class="lead-dot"></div>
+            <div class="lead-text">Active Problem Solver on LeetCode and GitHub</div>
+          </div>
+
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="resume-footer">
+      <span class="resume-footer-note">Updated September 2026 · Available for internships &amp; full-time roles</span>
+      <span class="resume-footer-badge">MUSKAN GUPTA // FULL STACK DEVELOPER</span>
+    </footer>
+
+  </div>
+
+</body>
+</html>
