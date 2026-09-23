@@ -673,6 +673,7 @@ body, html {
   color: var(--color--grey-1);
   white-space: nowrap;
   z-index: 5;
+  pointer-events: none;
 }
 
 /* Floating HUD Next Build Card (SVG Cut-Corner) */

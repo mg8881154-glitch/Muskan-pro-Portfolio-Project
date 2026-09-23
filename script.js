@@ -100,19 +100,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 5a. Force Resume Download Button ---
-  document.querySelectorAll('a[download]').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var link = document.createElement('a');
-      link.href = 'resume.pdf';
-      link.download = 'Muskan_Gupta_Resume.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      e.preventDefault();
-    });
-  });
+  // --- 5a. Force Resume Download Button - Nuclear Fix ---
+  setTimeout(function() {
+    var resumeBtn = document.querySelector('a[download="Muskan_Gupta_Resume.pdf"]');
+    if (resumeBtn) {
+      // Remove all parent pointer-events blocks
+      var el = resumeBtn;
+      while (el && el !== document.body) {
+        el.style.pointerEvents = 'auto';
+        el = el.parentElement;
+      }
+      resumeBtn.style.pointerEvents = 'auto';
+      resumeBtn.style.position = 'relative';
+      resumeBtn.style.zIndex = '9999';
+      resumeBtn.style.cursor = 'pointer';
+
+      resumeBtn.addEventListener('click', function(e) {
+        e.stopImmediatePropagation();
+        var a = document.createElement('a');
+        a.href = 'resume.pdf';
+        a.download = 'Muskan_Gupta_Resume.pdf';
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() { document.body.removeChild(a); }, 100);
+      });
+    }
+  }, 500);
 
   // --- 5. Interactive Calendar Rows ---
   calendarRows.forEach((row) => {
